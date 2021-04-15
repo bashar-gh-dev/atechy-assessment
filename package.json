@@ -1,0 +1,17 @@
+{
+  "name": "atechy",
+  "version": "1.0.0",
+  "scripts": {
+    "install:server": "cd ./fakeserver && npm install",
+    "install:client": "cd ./client && npm install",
+    "install:all": "npm install && concurrently \"npm run install:server\" \"npm run install:client\"",
+    "run:server": "cd ./fakeserver && npm run dev",
+    "run:client": "cd ./client && npm start",
+    "run:all": "concurrently \"npm run run:server\" \"npm run run:client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.5.1"
+  }
+}
